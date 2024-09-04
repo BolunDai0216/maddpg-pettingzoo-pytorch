@@ -1,5 +1,6 @@
 import argparse
 import os
+import time
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -43,6 +44,7 @@ if __name__ == '__main__':
 
             for agent_id, reward in rewards.items():  # update reward
                 agent_reward[agent_id] += reward
+            time.sleep(0.01)
 
         env.close()
         message = f'episode {episode + 1}, '
